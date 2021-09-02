@@ -1,9 +1,9 @@
-## <i> Toolbar
+## ``<i>`` Toolbar
 
-**<i> Toolbar by them.es** is a simple WordPress <i>con Picker for rich-text blocks which can be used with any WordPress theme.
+**``<i>`` Toolbar by them.es** is a simple WordPress ``<i>``con Picker for rich-text blocks which can be used with any WordPress theme.
 
 ## Setup
-* Open a page or post using the block editor, add a paragraph or heading block and select the "<i>" menu item from the toolbar.
+* Open a page or post using the block editor, add a paragraph or heading block and select the ``<i>`` menu item from the toolbar.
 * Choose an icon and it will appear in the content area. Simple and fast!
 
 ## Contributing
