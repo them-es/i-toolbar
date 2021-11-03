@@ -4,7 +4,7 @@ Donate link: https://them.es/plugins/i-toolbar
 Tags: Icon, Icons, Bootstrap, Editor, Gutenberg
 Requires at least: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 7.2
@@ -13,7 +13,7 @@ Requires PHP: 7.2
 
 == Description ==
 
-* Bootstrap Icons (1400+ icons)
+* Bootstrap Icons (1500+ icons)
 * Add pixel perfect web font icons
 * Easy and simple integration
 * Autofilter
@@ -58,6 +58,9 @@ If you like this plugin and regularly use Emojis in your posts you may find our 
 * Yes, you can network-activate this plugin and the feature will be enabled on all sites.
 
 == Changelog ==
+
+= 1.0.2 =
+* Updated Bootstrap Icons to v1.7
 
 = 1.0.1 =
 * Updated Bootstrap Icons to v1.6
