@@ -7,7 +7,7 @@
  * Plugin Name: &lt;i&gt; Toolbar
  * Plugin URI: https://wordpress.org/plugins/i-toolbar
  * Description: A simple &lt;i&gt;con picker for rich-text blocks. Powered by Bootstrap Icons (MIT).
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: them.es
  * Author URI: https://them.es/plugins/i-toolbar
  * Text Domain: i-toolbar
@@ -22,15 +22,18 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * Enqueue Frontend assets.
+ * https://developer.wordpress.org/reference/functions/get_file_data/
  * https://developer.wordpress.org/reference/hooks/wp_enqueue_scripts/
  */
 function i_toolbar_enqueue_assets() {
+	$data = get_file_data( __FILE__, array( 'version' => 'Version' ), 'plugin' );
+
 	// Enqueue styles.
 	wp_enqueue_style(
 		'i-toolbar-webfont',
 		plugins_url( 'assets/bootstrap-icons/font/bootstrap-icons.css', __FILE__ ),
 		array(),
-		'1.0',
+		$data['version'],
 		'all'
 	);
 }
