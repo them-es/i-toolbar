@@ -13,11 +13,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 70%;
-	height: 70%;
-	position: absolute;
-	top: 15% !important;
-	left: 15% !important;
 	color: #FFF;
 	background-color: #7952B3;
 	border-radius: 8px;
