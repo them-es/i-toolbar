@@ -45,8 +45,11 @@ add_action( 'wp_enqueue_scripts', 'i_toolbar_enqueue_assets' );
  * https://developer.wordpress.org/reference/hooks/enqueue_block_editor_assets/
  */
 function i_toolbar_enqueue_editor_assets() {
-	$response_i_selection = wp_remote_get( plugins_url( 'assets/bootstrap-icons/font/bootstrap-icons.json', __FILE__ ) );
-	//print_r( $response_i_selection['body'] );
+	$icon_font_selection = @file_get_contents( path_join( plugin_dir_path( __FILE__ ), 'assets/bootstrap-icons/font/bootstrap-icons.json' ) );
+	// print_r( $icon_font_selection );
+	if ( false === $icon_font_selection ) {
+		$icon_font_selection = '{ "No icons found!": "" }';
+	}
 
 	$asset_file = include __DIR__ . '/blocks/build/index.asset.php';
 
@@ -62,7 +65,7 @@ function i_toolbar_enqueue_editor_assets() {
 		'globalBootstrapIconToolbarData',
 		array(
 			'pluginRoot'        => esc_url( plugins_url( '', __FILE__ ) ),
-			'iconFontSelection' => ( ! is_wp_error( $response_i_selection ) ? $response_i_selection['body'] : '' ),
+			'iconFontSelection' => $icon_font_selection,
 		)
 	);
 
