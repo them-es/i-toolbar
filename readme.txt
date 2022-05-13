@@ -4,7 +4,7 @@ Donate link: https://them.es/plugins/i-toolbar
 Tags: Icon, Icons, Bootstrap, Editor, Gutenberg
 Requires at least: 5.6
 Tested up to: 6.0
-Stable tag: 1.0.5
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 7.2
@@ -58,6 +58,9 @@ If you like this plugin and regularly use Emojis in your posts you may find our 
 * Yes, you can network-activate this plugin and the feature will be enabled on all sites.
 
 == Changelog ==
+
+= 1.1.0 =
+* Change how bootstrap-icons.json is read to be compatible with Docker container and HTTP basic authentication. Props https://github.com/dkellner
 
 = 1.0.5 =
 * Minor style updates
