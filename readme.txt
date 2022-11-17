@@ -13,7 +13,7 @@ Requires PHP: 7.2
 
 == Description ==
 
-* Bootstrap Icons (1600+ icons)
+* Bootstrap Icons (1900+ icons)
 * Add pixel perfect web font icons
 * Easy and simple integration
 * Autofilter
@@ -58,6 +58,9 @@ If you like this plugin and regularly use Emojis in your posts you may find our 
 * Yes, you can network-activate this plugin and the feature will be enabled on all sites.
 
 == Changelog ==
+
+= 1.1.2 =
+* Updated Bootstrap Icons to v1.10.2
 
 = 1.1.1 =
 * Updated Bootstrap Icons to v1.9.1
