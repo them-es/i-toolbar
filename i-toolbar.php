@@ -1,13 +1,9 @@
 <?php
 /**
- * @package <i> Toolbar
- * @version 1.0.0
- *
- * @wordpress-plugin
  * Plugin Name: &lt;i&gt; Toolbar
  * Plugin URI: https://wordpress.org/plugins/i-toolbar
  * Description: A simple &lt;i&gt;con picker for rich-text blocks. Powered by Bootstrap Icons (MIT).
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: them.es
  * Author URI: https://them.es/plugins/i-toolbar
  * Text Domain: i-toolbar
@@ -19,11 +15,12 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
 /**
  * Enqueue Frontend assets.
  * https://developer.wordpress.org/reference/functions/get_file_data/
  * https://developer.wordpress.org/reference/hooks/wp_enqueue_scripts/
+ *
+ * @return void
  */
 function i_toolbar_enqueue_assets() {
 	$data = get_file_data( __FILE__, array( 'version' => 'Version' ), 'plugin' );
@@ -39,10 +36,11 @@ function i_toolbar_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'i_toolbar_enqueue_assets' );
 
-
 /**
  * Enqueue block editor assets.
  * https://developer.wordpress.org/reference/hooks/enqueue_block_editor_assets/
+ *
+ * @return void
  */
 function i_toolbar_enqueue_editor_assets() {
 	$icon_font_selection = @file_get_contents( path_join( plugin_dir_path( __FILE__ ), 'assets/bootstrap-icons/font/bootstrap-icons.json' ) );

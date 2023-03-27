@@ -3,8 +3,8 @@ Contributors: them.es
 Donate link: https://them.es/plugins/i-toolbar
 Tags: Icon, Icons, Bootstrap, Editor, Gutenberg
 Requires at least: 5.6
-Tested up to: 6.1
-Stable tag: 1.1.2
+Tested up to: 6.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 7.2
@@ -13,12 +13,13 @@ Requires PHP: 7.2
 
 == Description ==
 
-* Bootstrap Icons (1900+ icons)
-* Add pixel perfect web font icons
-* Easy and simple integration
-* Autofilter
-* Can be used with any WordPress theme
-* Privacy by Design: No CDN hosted files
+* Bootstrap Icons (1900+ icons).
+* Add pixel perfect web font icons.
+* Easy and simple integration.
+* Autofilter.
+* Can be used with any WordPress theme.
+* Only compatible with WordPress (Gutenberg) Core. Third-party page builders have not been tested.
+* Privacy by Design: No CDN hosted files.
 
 The Bootstrap Icons library (MIT License) is brought to you by the Bootstrap team [https://github.com/twbs/icons](https://github.com/twbs/icons "GitHub"). We are not affiliated with Bootstrap.
 
@@ -58,6 +59,11 @@ If you like this plugin and regularly use Emojis in your posts you may find our 
 * Yes, you can network-activate this plugin and the feature will be enabled on all sites.
 
 == Changelog ==
+
+= 1.1.3 =
+* Code quality
+* Documentation
+* Update dependencies
 
 = 1.1.2 =
 * Updated Bootstrap Icons to v1.10.2
