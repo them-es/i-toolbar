@@ -12,6 +12,10 @@
 	);
 }
 
+.block-editor-block-toolbar .i-toolbar span {
+	visibility: hidden;
+}
+
 .block-editor-block-toolbar .i-toolbar::before {
 	content: "<i>";
 	background-color: var(--wp-components-color-foreground, #1e1e1e);
