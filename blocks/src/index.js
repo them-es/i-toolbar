@@ -1,6 +1,6 @@
 /**
  * WordPress dependencies
- * https://developer.wordpress.org/block-editor/how-to-guides/format-api/2-toolbar-button/
+ * https://developer.wordpress.org/block-editor/reference-guides/components/toolbar-button/
  * https://github.com/gziolo/gutenberg-times/blob/master/src/index.js
  */
 import { __ } from "@wordpress/i18n";
