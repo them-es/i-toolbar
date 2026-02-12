@@ -3,7 +3,7 @@
  * Plugin Name: &lt;i&gt; Toolbar
  * Plugin URI: https://wordpress.org/plugins/i-toolbar
  * Description: A simple &lt;i&gt;con picker for rich-text blocks. Powered by Bootstrap Icons (MIT).
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: them.es
  * Author URI: https://them.es/plugins/i-toolbar
  * Text Domain: i-toolbar
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return void
  */
-function i_toolbar_enqueue_editor_assets() {
+function i_toolbar_enqueue_editor_assets(): void {
 	$asset_file = include __DIR__ . '/blocks/build/index.asset.php';
 
 	if ( is_admin() && get_current_screen()->is_block_editor() ) {
