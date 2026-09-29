@@ -3,7 +3,7 @@
  * Plugin Name: &lt;i&gt; Toolbar
  * Plugin URI: https://wordpress.org/plugins/i-toolbar
  * Description: A simple &lt;i&gt;con picker for rich-text blocks. Powered by Bootstrap Icons (MIT).
- * Version: 1.2.2
+ * Version: 1.3.0
  * Author: them.es
  * Author URI: https://them.es/plugins/i-toolbar
  * Text Domain: i-toolbar
@@ -70,3 +70,48 @@ function i_toolbar_enqueue_editor_assets(): void {
 	);
 }
 add_action( 'enqueue_block_assets', 'i_toolbar_enqueue_editor_assets' );
+
+/**
+ * Register custom icons (>= WordPress 7.1 required).
+ *
+ * [Block] <!-- wp:icon {"icon":"i-toolbar/star"} /-->
+ * [PHP] echo wp_get_icon( 'i-toolbar/star' );
+ *
+ * @since v1.3.0
+ *
+ * @return void
+ */
+function i_toolbar_register_icon_collection() {
+	wp_register_icon_collection(
+		'i-toolbar',
+		array(
+			'label' => __( 'Bootstrap Icons', 'i-toolbar' ),
+		)
+	);
+	wp_register_icon_collection(
+		'i-toolbar-fill',
+		array(
+			'label' => sprintf( __( '%1$s (%2$s)', 'i-toolbar' ), __( 'Bootstrap Icons', 'i-toolbar' ), __( 'fill', 'i-toolbar' ) ),
+		)
+	);
+
+	// Add icons located in "/assets/icons/*.svg".
+	$base_path = __DIR__ . '/assets/bootstrap-icons/icons';
+	$icons     = glob( $base_path . '/*.svg' );
+
+	foreach ( $icons as $file_path ) {
+		$icon_name = pathinfo( $file_path, PATHINFO_FILENAME );
+		$is_fill   = str_contains( $icon_name, '-fill' );
+
+		$group = $is_fill ? 'i-toolbar-fill' : 'i-toolbar';
+
+		wp_register_icon(
+			"{$group}/{$icon_name}",
+			array(
+				'label'     => $icon_name,
+				'file_path' => $file_path,
+			)
+		);
+	}
+}
+add_action( 'init', 'i_toolbar_register_icon_collection' );
