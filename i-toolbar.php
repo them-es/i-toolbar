@@ -82,6 +82,10 @@ add_action( 'enqueue_block_assets', 'i_toolbar_enqueue_editor_assets' );
  * @return void
  */
 function i_toolbar_register_icon_collection() {
+	if ( ! function_exists( 'wp_register_icon' ) ) {
+		return;
+	}
+
 	wp_register_icon_collection(
 		'i-toolbar',
 		array(
