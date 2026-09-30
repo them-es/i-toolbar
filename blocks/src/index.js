@@ -10,8 +10,8 @@ import {
 	toggleFormat,
 	removeFormat,
 	registerFormatType,
-	create,
 	insert,
+	create,
 } from "@wordpress/rich-text";
 import { useState } from "@wordpress/element";
 
@@ -66,7 +66,7 @@ const addIcon = ({ isActive, value, onChange, onFocus }) => {
 							.filter(
 								(icon) =>
 									icon.includes(searchValue) ||
-									searchValue.length < 2
+									searchValue.length < 2,
 							)
 							.map((icon) => (
 								<button
@@ -80,10 +80,11 @@ const addIcon = ({ isActive, value, onChange, onFocus }) => {
 											insert(
 												value,
 												create({
-													html: `<i class="bi bi-${icon}"></i> `,
-												})
-											)
+													html: `<i class="bi bi-${icon}"> </i> `,
+												}),
+											),
 										);
+										// Keep focus in RichText field
 										onFocus();
 									}}
 								>
@@ -101,6 +102,6 @@ const addIcon = ({ isActive, value, onChange, onFocus }) => {
 registerFormatType(name, {
 	title: __("Icon", "i-toolbar"),
 	tagName: "i",
-	className: null,
+	className: "bi",
 	edit: addIcon,
 });

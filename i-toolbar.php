@@ -3,7 +3,7 @@
  * Plugin Name: &lt;i&gt; Toolbar
  * Plugin URI: https://wordpress.org/plugins/i-toolbar
  * Description: A simple &lt;i&gt;con picker for rich-text blocks. Powered by Bootstrap Icons (MIT).
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: them.es
  * Author URI: https://them.es/plugins/i-toolbar
  * Text Domain: i-toolbar
@@ -101,7 +101,17 @@ function i_toolbar_register_icon_collection() {
 
 	// Add icons located in "/assets/icons/*.svg".
 	$base_path = __DIR__ . '/assets/bootstrap-icons/icons';
-	$icons     = glob( $base_path . '/*.svg' );
+
+	// Check if directory exists and is readable.
+	if ( ! is_dir( $base_path ) || ! is_readable( $base_path ) ) {
+		return;
+	}
+
+	$icons = glob( $base_path . '/*.svg' );
+
+	if ( empty( $icons ) ) {
+		return;
+	}
 
 	foreach ( $icons as $file_path ) {
 		$icon_name = pathinfo( $file_path, PATHINFO_FILENAME );

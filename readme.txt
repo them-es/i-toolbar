@@ -4,7 +4,7 @@ Donate link: https://them.es/plugins/i-toolbar
 Tags: Icon, Icons, Bootstrap, Editor, Gutenberg
 Requires at least: 5.6
 Tested up to: 7.1
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 7.2
@@ -59,6 +59,9 @@ If you like this plugin and regularly use Emojis in your posts you may find our 
 * Yes, you can network-activate this plugin and the feature will be enabled on all sites.
 
 == Changelog ==
+
+= 1.3.1 =
+* Bugfix: Restore icons in editor after selection
 
 = 1.3.0 =
 * In addition to the webfont, Bootstrap Icons are now registered with the Icon Registration API (WordPress >= 7.1 required!)
