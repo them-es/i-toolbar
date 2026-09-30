@@ -80,7 +80,7 @@ const addIcon = ({ isActive, value, onChange, onFocus }) => {
 											insert(
 												value,
 												create({
-													html: `<i class="bi bi-${icon}"> </i> `,
+													html: `&nbsp;<i class="bi bi-${icon}"> </i>&nbsp;`,
 												}),
 											),
 										);
